@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../headers/graphics.h
+SDL2/SDL.h
+-
+
+/home/manuel/development/cavestory/source/src/graphics.cc
+graphics.h
+/home/manuel/development/cavestory/source/src/graphics.h
+
+/home/manuel/development/cavestory/source/src/main.cc
+iostream
+-
+graphics.h
+/home/manuel/development/cavestory/source/src/graphics.h
+
