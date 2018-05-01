@@ -6,9 +6,19 @@
 
 #IncludeRegexTransform: 
 
+../headers/game.h
+SDL2/SDL.h
+-
+graphics.h
+../headers/graphics.h
+
 ../headers/graphics.h
 SDL2/SDL.h
 -
+
+/home/manuel/development/cavestory/source/src/game.cc
+game.h
+/home/manuel/development/cavestory/source/src/game.h
 
 /home/manuel/development/cavestory/source/src/graphics.cc
 graphics.h
@@ -17,6 +27,6 @@ graphics.h
 /home/manuel/development/cavestory/source/src/main.cc
 iostream
 -
-graphics.h
-/home/manuel/development/cavestory/source/src/graphics.h
+game.h
+/home/manuel/development/cavestory/source/src/game.h
 

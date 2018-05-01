@@ -123,6 +123,33 @@ cavestory/fast:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/build
 .PHONY : cavestory/fast
 
+src/game.o: src/game.cc.o
+
+.PHONY : src/game.o
+
+# target to build an object file
+src/game.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/game.cc.o
+.PHONY : src/game.cc.o
+
+src/game.i: src/game.cc.i
+
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/game.cc.i
+.PHONY : src/game.cc.i
+
+src/game.s: src/game.cc.s
+
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/game.cc.s
+.PHONY : src/game.cc.s
+
 src/graphics.o: src/graphics.cc.o
 
 .PHONY : src/graphics.o
@@ -186,6 +213,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cavestory"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
 	@echo "... src/graphics.o"
 	@echo "... src/graphics.i"
 	@echo "... src/graphics.s"

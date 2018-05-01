@@ -8,6 +8,7 @@ include_directories(headers)
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
+# Adding all .cc files in the src directory
 file(GLOB SOURCES "src/*.cc")
 
 add_executable(cavestory ${SOURCES})

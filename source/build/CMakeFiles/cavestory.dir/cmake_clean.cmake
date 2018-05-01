@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cavestory.dir/src/graphics.cc.o"
   "CMakeFiles/cavestory.dir/src/main.cc.o"
+  "CMakeFiles/cavestory.dir/src/game.cc.o"
   "cavestory.pdb"
   "cavestory"
 )
