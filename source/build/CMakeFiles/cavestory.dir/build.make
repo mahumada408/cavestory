@@ -57,9 +57,33 @@ include CMakeFiles/cavestory.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cavestory.dir/flags.make
 
+CMakeFiles/cavestory.dir/src/input.cc.o: CMakeFiles/cavestory.dir/flags.make
+CMakeFiles/cavestory.dir/src/input.cc.o: ../src/input.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cavestory.dir/src/input.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/input.cc.o -c /home/manuel/development/cavestory/source/src/input.cc
+
+CMakeFiles/cavestory.dir/src/input.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cavestory.dir/src/input.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manuel/development/cavestory/source/src/input.cc > CMakeFiles/cavestory.dir/src/input.cc.i
+
+CMakeFiles/cavestory.dir/src/input.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cavestory.dir/src/input.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manuel/development/cavestory/source/src/input.cc -o CMakeFiles/cavestory.dir/src/input.cc.s
+
+CMakeFiles/cavestory.dir/src/input.cc.o.requires:
+
+.PHONY : CMakeFiles/cavestory.dir/src/input.cc.o.requires
+
+CMakeFiles/cavestory.dir/src/input.cc.o.provides: CMakeFiles/cavestory.dir/src/input.cc.o.requires
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/input.cc.o.provides.build
+.PHONY : CMakeFiles/cavestory.dir/src/input.cc.o.provides
+
+CMakeFiles/cavestory.dir/src/input.cc.o.provides.build: CMakeFiles/cavestory.dir/src/input.cc.o
+
+
 CMakeFiles/cavestory.dir/src/graphics.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/graphics.cc.o: ../src/graphics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cavestory.dir/src/graphics.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cavestory.dir/src/graphics.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/graphics.cc.o -c /home/manuel/development/cavestory/source/src/graphics.cc
 
 CMakeFiles/cavestory.dir/src/graphics.cc.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/cavestory.dir/src/graphics.cc.o.provides.build: CMakeFiles/cavestory.
 
 CMakeFiles/cavestory.dir/src/main.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/main.cc.o: ../src/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cavestory.dir/src/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cavestory.dir/src/main.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/main.cc.o -c /home/manuel/development/cavestory/source/src/main.cc
 
 CMakeFiles/cavestory.dir/src/main.cc.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/cavestory.dir/src/main.cc.o.provides.build: CMakeFiles/cavestory.dir/
 
 CMakeFiles/cavestory.dir/src/game.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/game.cc.o: ../src/game.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cavestory.dir/src/game.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cavestory.dir/src/game.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/game.cc.o -c /home/manuel/development/cavestory/source/src/game.cc
 
 CMakeFiles/cavestory.dir/src/game.cc.i: cmake_force
@@ -131,6 +155,7 @@ CMakeFiles/cavestory.dir/src/game.cc.o.provides.build: CMakeFiles/cavestory.dir/
 
 # Object files for target cavestory
 cavestory_OBJECTS = \
+"CMakeFiles/cavestory.dir/src/input.cc.o" \
 "CMakeFiles/cavestory.dir/src/graphics.cc.o" \
 "CMakeFiles/cavestory.dir/src/main.cc.o" \
 "CMakeFiles/cavestory.dir/src/game.cc.o"
@@ -138,12 +163,13 @@ cavestory_OBJECTS = \
 # External object files for target cavestory
 cavestory_EXTERNAL_OBJECTS =
 
+cavestory: CMakeFiles/cavestory.dir/src/input.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/graphics.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/main.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/game.cc.o
 cavestory: CMakeFiles/cavestory.dir/build.make
 cavestory: CMakeFiles/cavestory.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable cavestory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manuel/development/cavestory/source/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cavestory"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cavestory.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,6 +177,7 @@ CMakeFiles/cavestory.dir/build: cavestory
 
 .PHONY : CMakeFiles/cavestory.dir/build
 
+CMakeFiles/cavestory.dir/requires: CMakeFiles/cavestory.dir/src/input.cc.o.requires
 CMakeFiles/cavestory.dir/requires: CMakeFiles/cavestory.dir/src/graphics.cc.o.requires
 CMakeFiles/cavestory.dir/requires: CMakeFiles/cavestory.dir/src/main.cc.o.requires
 CMakeFiles/cavestory.dir/requires: CMakeFiles/cavestory.dir/src/game.cc.o.requires

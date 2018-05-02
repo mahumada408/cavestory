@@ -2,6 +2,7 @@
 
 #include <SDL2/SDL.h>
 #include "graphics.h"
+#include "input.h"
 
 // Game Class
 // This class holds all information dealing with the game for Cavestory

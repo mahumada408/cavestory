@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/manuel/development/cavestory/source/src/game.cc" "/home/manuel/development/cavestory/source/build/CMakeFiles/cavestory.dir/src/game.cc.o"
   "/home/manuel/development/cavestory/source/src/graphics.cc" "/home/manuel/development/cavestory/source/build/CMakeFiles/cavestory.dir/src/graphics.cc.o"
+  "/home/manuel/development/cavestory/source/src/input.cc" "/home/manuel/development/cavestory/source/build/CMakeFiles/cavestory.dir/src/input.cc.o"
   "/home/manuel/development/cavestory/source/src/main.cc" "/home/manuel/development/cavestory/source/build/CMakeFiles/cavestory.dir/src/main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

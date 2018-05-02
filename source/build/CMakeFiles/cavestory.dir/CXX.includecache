@@ -11,8 +11,16 @@ SDL2/SDL.h
 -
 graphics.h
 ../headers/graphics.h
+input.h
+../headers/input.h
 
 ../headers/graphics.h
+SDL2/SDL.h
+-
+
+../headers/input.h
+map
+-
 SDL2/SDL.h
 -
 
@@ -23,6 +31,10 @@ game.h
 /home/manuel/development/cavestory/source/src/graphics.cc
 graphics.h
 /home/manuel/development/cavestory/source/src/graphics.h
+
+/home/manuel/development/cavestory/source/src/input.cc
+input.h
+/home/manuel/development/cavestory/source/src/input.h
 
 /home/manuel/development/cavestory/source/src/main.cc
 iostream
