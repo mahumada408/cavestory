@@ -19,7 +19,8 @@ Game::~Game()
 {
 }
 
-// This is a very important function, maybe the most important in the program. This will happen every frame!
+// This is a very important function, maybe the most important in the program. 
+// This will happen every frame!
 void Game::GameLoop()
 {
     Graphics graphics;
@@ -48,7 +49,8 @@ void Game::GameLoop()
             {
                 input.KeyReleasedEvent(sdl_event);
             }
-            // SDL_QUIT can happen if we x out of the game window. This allows us to close the program without getting stuck in the loop.
+            // SDL_QUIT can happen if we x out of the game window. This allows 
+            // us to close the program without getting stuck in the loop.
             else if (sdl_event.type == SDL_QUIT)
             {
                 return;

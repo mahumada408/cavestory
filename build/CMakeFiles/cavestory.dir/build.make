@@ -124,6 +124,7 @@ cavestory: CMakeFiles/cavestory.dir/src/graphics.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/input.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/main.cc.o
 cavestory: CMakeFiles/cavestory.dir/build.make
+cavestory: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 cavestory: CMakeFiles/cavestory.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cavestory"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cavestory.dir/link.txt --verbose=$(VERBOSE)
