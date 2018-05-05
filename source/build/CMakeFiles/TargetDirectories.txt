@@ -1,3 +1,0 @@
-/home/manuel/development/cavestory/source/build/CMakeFiles/edit_cache.dir
-/home/manuel/development/cavestory/source/build/CMakeFiles/rebuild_cache.dir
-/home/manuel/development/cavestory/source/build/CMakeFiles/cavestory.dir

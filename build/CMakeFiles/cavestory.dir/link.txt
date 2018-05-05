@@ -1,0 +1,1 @@
+/usr/bin/clang++-3.8  -g  -rdynamic CMakeFiles/cavestory.dir/src/game.cc.o CMakeFiles/cavestory.dir/src/graphics.cc.o CMakeFiles/cavestory.dir/src/input.cc.o CMakeFiles/cavestory.dir/src/main.cc.o  -o cavestory -L/usr/lib/x86_64-linux-gnu  -lSDL2 

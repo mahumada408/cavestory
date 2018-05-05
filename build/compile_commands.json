@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/manuel/development/cavestory/build",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -o CMakeFiles/cavestory.dir/src/game.cc.o -c /home/manuel/development/cavestory/src/game.cc",
+  "file": "/home/manuel/development/cavestory/src/game.cc"
+},
+{
+  "directory": "/home/manuel/development/cavestory/build",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -o CMakeFiles/cavestory.dir/src/graphics.cc.o -c /home/manuel/development/cavestory/src/graphics.cc",
+  "file": "/home/manuel/development/cavestory/src/graphics.cc"
+},
+{
+  "directory": "/home/manuel/development/cavestory/build",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -o CMakeFiles/cavestory.dir/src/input.cc.o -c /home/manuel/development/cavestory/src/input.cc",
+  "file": "/home/manuel/development/cavestory/src/input.cc"
+},
+{
+  "directory": "/home/manuel/development/cavestory/build",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -o CMakeFiles/cavestory.dir/src/main.cc.o -c /home/manuel/development/cavestory/src/main.cc",
+  "file": "/home/manuel/development/cavestory/src/main.cc"
+}
+]
