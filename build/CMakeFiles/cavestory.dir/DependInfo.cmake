@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/manuel/development/cavestory/src/graphics.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/graphics.cc.o"
   "/home/manuel/development/cavestory/src/input.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/input.cc.o"
   "/home/manuel/development/cavestory/src/main.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/main.cc.o"
+  "/home/manuel/development/cavestory/src/sprite.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/sprite.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

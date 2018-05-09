@@ -3,6 +3,7 @@
 #include <SDL2/SDL.h>
 #include "graphics.h"
 #include "input.h"
+#include "sprite.h"
 
 // Game Class
 // This class holds all information dealing with the game for Cavestory
@@ -16,4 +17,6 @@ class Game {
         void GameLoop();
         void Draw(Graphics &graphics);
         void Update(double elapsed_time);
+
+        Sprite player_;
 };

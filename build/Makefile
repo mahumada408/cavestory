@@ -628,6 +628,33 @@ src/main.cc.s:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/sprite.o: src/sprite.cc.o
+
+.PHONY : src/sprite.o
+
+# target to build an object file
+src/sprite.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/sprite.cc.o
+.PHONY : src/sprite.cc.o
+
+src/sprite.i: src/sprite.cc.i
+
+.PHONY : src/sprite.i
+
+# target to preprocess a source file
+src/sprite.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/sprite.cc.i
+.PHONY : src/sprite.cc.i
+
+src/sprite.s: src/sprite.cc.s
+
+.PHONY : src/sprite.s
+
+# target to generate assembly for a file
+src/sprite.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/sprite.cc.s
+.PHONY : src/sprite.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -680,6 +707,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sprite.o"
+	@echo "... src/sprite.i"
+	@echo "... src/sprite.s"
 .PHONY : help
 
 

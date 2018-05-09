@@ -15,7 +15,7 @@ Game::Game()
     this->GameLoop();
 }
 
-Game::~Game()
+Game::~Game() 
 {
 }
 
@@ -26,6 +26,11 @@ void Game::GameLoop()
     Graphics graphics;
     Input input;
     SDL_Event sdl_event;
+
+    this->player_ = 
+    Sprite(graphics, 
+    "/home/manuel/development/cavestory/content/sprites/MyChar.png", 
+    0, 0, 16, 16, 100, 100);
 
     int last_update_time = SDL_GetTicks();
 
@@ -65,13 +70,20 @@ void Game::GameLoop()
         int elapsed_time_ms = current_time_ms - last_update_time;
         this->Update(std::min(elapsed_time_ms, max_frame_time));
         last_update_time = current_time_ms;
+
+        this->Draw(graphics);
     }
 }
 
-void Game::Draw(Graphics &graphics)
-{
+void Game::Draw(Graphics &graphics) {
+    graphics.Clear();
+
+    // Draw whatever cool stuff we have to the screen.
+    this->player_.Draw(graphics, 100, 100);
+
+    // To actually draw it on the screen from the renderer.
+    graphics.Flip();
 }
 
-void Game::Update(double elapsed_time)
-{
+void Game::Update(double elapsed_time) {
 }

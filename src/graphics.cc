@@ -16,3 +16,31 @@ Graphics::~Graphics()
 {
     SDL_DestroyWindow(window_);
 }
+
+SDL_Surface* Graphics::LoadImage(const std::string &filepath) {
+    // Sprite sheet has not been loaded.  
+    if (this->sprite_sheets_.count(filepath) == 0) {
+        // Load the sprite sheet map
+        this->sprite_sheets_[filepath] = IMG_Load(filepath.c_str());
+    }
+    return sprite_sheets_[filepath];
+}
+
+void Graphics::DrawToScreen(SDL_Texture* texture, SDL_Rect* source_rectangle, 
+                            SDL_Rect* destination_rectangle) {
+    // Copies whatever you pass in to the renderer. 
+    SDL_RenderCopy(this->renderer_, texture, source_rectangle, destination_rectangle);
+}
+
+void Graphics::Flip() {
+    // Actually draws it to the screen.
+    SDL_RenderPresent(this->renderer_);
+}
+
+void Graphics::Clear() {
+    SDL_RenderClear(this->renderer_);
+}
+
+SDL_Renderer* Graphics::GetRenderer() const {
+    return this->renderer_;
+}

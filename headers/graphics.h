@@ -12,7 +12,7 @@ class Graphics
 {
 public:
   // Constructor and destructor for the Graphics class. Constructor creates the
-  // window and rederer witha resolution of 640x480 in a window called
+  // window and rederer with a resolution of 640x480 in a window called
   // "Cave Story."
   Graphics();
   ~Graphics();
@@ -26,9 +26,10 @@ public:
   // [in] source - what we are drawing to the screen.
   // [in] source_rectangle - what part of the source are we drawing to the 
   // screen. For example, from the sprite sheet, we would load up a section.
-  // [in] destination_rectangle - the location of that certain part of the screen. 
-  void DrawToScreen(SDL_Texture *source, SDL_Rect *source_rectangle, 
-                    SDL_Rect *destination_rectangle);
+  // [in] destination_rectangle - the location of that certain part of the 
+  // screen. 
+  void DrawToScreen(SDL_Texture* texture, SDL_Rect* source_rectangle, 
+                    SDL_Rect* destination_rectangle);
   
   // Renders everything to the screen.
   void Flip();
@@ -43,5 +44,5 @@ private:
   SDL_Window *window_;
   SDL_Renderer *renderer_;
 
-  std::map<std::string, SDL_Surface*> sprite_sheets;
+  std::map<std::string, SDL_Surface*> sprite_sheets_;
 };

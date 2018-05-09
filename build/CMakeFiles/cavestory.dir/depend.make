@@ -4,6 +4,7 @@
 CMakeFiles/cavestory.dir/src/game.cc.o: ../headers/game.h
 CMakeFiles/cavestory.dir/src/game.cc.o: ../headers/graphics.h
 CMakeFiles/cavestory.dir/src/game.cc.o: ../headers/input.h
+CMakeFiles/cavestory.dir/src/game.cc.o: ../headers/sprite.h
 CMakeFiles/cavestory.dir/src/game.cc.o: ../src/game.cc
 
 CMakeFiles/cavestory.dir/src/graphics.cc.o: ../headers/graphics.h
@@ -15,5 +16,10 @@ CMakeFiles/cavestory.dir/src/input.cc.o: ../src/input.cc
 CMakeFiles/cavestory.dir/src/main.cc.o: ../headers/game.h
 CMakeFiles/cavestory.dir/src/main.cc.o: ../headers/graphics.h
 CMakeFiles/cavestory.dir/src/main.cc.o: ../headers/input.h
+CMakeFiles/cavestory.dir/src/main.cc.o: ../headers/sprite.h
 CMakeFiles/cavestory.dir/src/main.cc.o: ../src/main.cc
+
+CMakeFiles/cavestory.dir/src/sprite.cc.o: ../headers/graphics.h
+CMakeFiles/cavestory.dir/src/sprite.cc.o: ../headers/sprite.h
+CMakeFiles/cavestory.dir/src/sprite.cc.o: ../src/sprite.cc
 

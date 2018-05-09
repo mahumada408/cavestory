@@ -13,6 +13,8 @@ graphics.h
 ../headers/graphics.h
 input.h
 ../headers/input.h
+sprite.h
+../headers/sprite.h
 
 ../headers/graphics.h
 map
@@ -26,6 +28,16 @@ SDL2/SDL_image.h
 
 ../headers/input.h
 map
+-
+SDL2/SDL.h
+-
+
+../headers/sprite.h
+graphics.h
+../headers/graphics.h
+iostream
+-
+string
 -
 SDL2/SDL.h
 -
@@ -47,4 +59,8 @@ iostream
 -
 game.h
 /home/manuel/development/cavestory/src/game.h
+
+/home/manuel/development/cavestory/src/sprite.cc
+sprite.h
+/home/manuel/development/cavestory/src/sprite.h
 
