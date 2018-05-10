@@ -21,6 +21,8 @@ class Sprite
 
     virtual ~Sprite();
     virtual void Update();
+
+    // Draws sprite to screen.
     void Draw(Graphics &graphics, int x, int y);
 
   private:
