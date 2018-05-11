@@ -20,7 +20,7 @@ class AnimatedSprite : public Sprite {
         // the default parameter that gets set by deafult, but you don't need to
         // explicitly pass anything in. PLays the animation provided it isn't 
         // playing already.
-        void PlayAnimation(std::string, bool once = false);
+        void PlayAnimation(std::string animation, bool once = false);
 
         // Updates the animated sprite on a timer. 
         void Update(int elapsed_time);
@@ -35,6 +35,32 @@ class AnimatedSprite : public Sprite {
             double x;
             double y;
         };
+
+    protected:
+        // Amount of time between frames.
+        double time_to_update;
+
+        // How we know an animatino is only played once. 
+        bool current_animation_once_;
+
+        // Name of the current animaiton being played. 
+        std::string current_animation_;
+
+        // Adds animation to map of animations.  
+        void AddAnimation(int frames, int x, int y, std::string name, int width,
+         int height, Vector2 offset);
+
+        // Resets the map. 
+        void ResetAnimations();
+
+        // Stops the current animation. 
+        void StopAnimation();
+
+        // Changes the visibility of the animated sprite. 
+        void SetVisible(bool visible);
+
+        // Logic that happens when an animation ends. 
+        virtual void AnimationDone(std::string current_animation_);
 
     private:
         // Holds the animatino for a sprite. For example, the running animation 

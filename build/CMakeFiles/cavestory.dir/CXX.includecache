@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../headers/animated_sprite.h
+map
+-
+string
+-
+SDL2/SDL.h
+-
+vector
+-
+graphics.h
+../headers/graphics.h
+sprite.h
+../headers/sprite.h
+
 ../headers/game.h
 SDL2/SDL.h
 -
@@ -41,6 +55,10 @@ string
 -
 SDL2/SDL.h
 -
+
+/home/manuel/development/cavestory/src/animated_sprite.cc
+animated_sprite.h
+/home/manuel/development/cavestory/src/animated_sprite.h
 
 /home/manuel/development/cavestory/src/game.cc
 game.h

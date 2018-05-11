@@ -520,6 +520,33 @@ ContinuousUpdate/fast:
 	$(MAKE) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
 .PHONY : ContinuousUpdate/fast
 
+src/animated_sprite.o: src/animated_sprite.cc.o
+
+.PHONY : src/animated_sprite.o
+
+# target to build an object file
+src/animated_sprite.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/animated_sprite.cc.o
+.PHONY : src/animated_sprite.cc.o
+
+src/animated_sprite.i: src/animated_sprite.cc.i
+
+.PHONY : src/animated_sprite.i
+
+# target to preprocess a source file
+src/animated_sprite.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/animated_sprite.cc.i
+.PHONY : src/animated_sprite.cc.i
+
+src/animated_sprite.s: src/animated_sprite.cc.s
+
+.PHONY : src/animated_sprite.s
+
+# target to generate assembly for a file
+src/animated_sprite.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/animated_sprite.cc.s
+.PHONY : src/animated_sprite.cc.s
+
 src/game.o: src/game.cc.o
 
 .PHONY : src/game.o
@@ -695,6 +722,9 @@ help:
 	@echo "... ExperimentalSubmit"
 	@echo "... ContinuousStart"
 	@echo "... ContinuousUpdate"
+	@echo "... src/animated_sprite.o"
+	@echo "... src/animated_sprite.i"
+	@echo "... src/animated_sprite.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"

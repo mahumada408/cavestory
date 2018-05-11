@@ -57,9 +57,22 @@ include CMakeFiles/cavestory.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cavestory.dir/flags.make
 
+CMakeFiles/cavestory.dir/src/animated_sprite.cc.o: CMakeFiles/cavestory.dir/flags.make
+CMakeFiles/cavestory.dir/src/animated_sprite.cc.o: ../src/animated_sprite.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cavestory.dir/src/animated_sprite.cc.o"
+	/usr/bin/clang++-3.8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/animated_sprite.cc.o -c /home/manuel/development/cavestory/src/animated_sprite.cc
+
+CMakeFiles/cavestory.dir/src/animated_sprite.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cavestory.dir/src/animated_sprite.cc.i"
+	/usr/bin/clang++-3.8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manuel/development/cavestory/src/animated_sprite.cc > CMakeFiles/cavestory.dir/src/animated_sprite.cc.i
+
+CMakeFiles/cavestory.dir/src/animated_sprite.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cavestory.dir/src/animated_sprite.cc.s"
+	/usr/bin/clang++-3.8 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manuel/development/cavestory/src/animated_sprite.cc -o CMakeFiles/cavestory.dir/src/animated_sprite.cc.s
+
 CMakeFiles/cavestory.dir/src/game.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/game.cc.o: ../src/game.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cavestory.dir/src/game.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cavestory.dir/src/game.cc.o"
 	/usr/bin/clang++-3.8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/game.cc.o -c /home/manuel/development/cavestory/src/game.cc
 
 CMakeFiles/cavestory.dir/src/game.cc.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/cavestory.dir/src/game.cc.s: cmake_force
 
 CMakeFiles/cavestory.dir/src/graphics.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/graphics.cc.o: ../src/graphics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cavestory.dir/src/graphics.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cavestory.dir/src/graphics.cc.o"
 	/usr/bin/clang++-3.8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/graphics.cc.o -c /home/manuel/development/cavestory/src/graphics.cc
 
 CMakeFiles/cavestory.dir/src/graphics.cc.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/cavestory.dir/src/graphics.cc.s: cmake_force
 
 CMakeFiles/cavestory.dir/src/input.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/input.cc.o: ../src/input.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cavestory.dir/src/input.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cavestory.dir/src/input.cc.o"
 	/usr/bin/clang++-3.8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/input.cc.o -c /home/manuel/development/cavestory/src/input.cc
 
 CMakeFiles/cavestory.dir/src/input.cc.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/cavestory.dir/src/input.cc.s: cmake_force
 
 CMakeFiles/cavestory.dir/src/main.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/main.cc.o: ../src/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cavestory.dir/src/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cavestory.dir/src/main.cc.o"
 	/usr/bin/clang++-3.8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/main.cc.o -c /home/manuel/development/cavestory/src/main.cc
 
 CMakeFiles/cavestory.dir/src/main.cc.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/cavestory.dir/src/main.cc.s: cmake_force
 
 CMakeFiles/cavestory.dir/src/sprite.cc.o: CMakeFiles/cavestory.dir/flags.make
 CMakeFiles/cavestory.dir/src/sprite.cc.o: ../src/sprite.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cavestory.dir/src/sprite.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cavestory.dir/src/sprite.cc.o"
 	/usr/bin/clang++-3.8  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cavestory.dir/src/sprite.cc.o -c /home/manuel/development/cavestory/src/sprite.cc
 
 CMakeFiles/cavestory.dir/src/sprite.cc.i: cmake_force
@@ -124,6 +137,7 @@ CMakeFiles/cavestory.dir/src/sprite.cc.s: cmake_force
 
 # Object files for target cavestory
 cavestory_OBJECTS = \
+"CMakeFiles/cavestory.dir/src/animated_sprite.cc.o" \
 "CMakeFiles/cavestory.dir/src/game.cc.o" \
 "CMakeFiles/cavestory.dir/src/graphics.cc.o" \
 "CMakeFiles/cavestory.dir/src/input.cc.o" \
@@ -133,6 +147,7 @@ cavestory_OBJECTS = \
 # External object files for target cavestory
 cavestory_EXTERNAL_OBJECTS =
 
+cavestory: CMakeFiles/cavestory.dir/src/animated_sprite.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/game.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/graphics.cc.o
 cavestory: CMakeFiles/cavestory.dir/src/input.cc.o
@@ -141,7 +156,7 @@ cavestory: CMakeFiles/cavestory.dir/src/sprite.cc.o
 cavestory: CMakeFiles/cavestory.dir/build.make
 cavestory: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 cavestory: CMakeFiles/cavestory.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable cavestory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manuel/development/cavestory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable cavestory"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cavestory.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

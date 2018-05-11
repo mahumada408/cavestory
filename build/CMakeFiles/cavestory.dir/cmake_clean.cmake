@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cavestory.dir/src/animated_sprite.cc.o"
   "CMakeFiles/cavestory.dir/src/game.cc.o"
   "CMakeFiles/cavestory.dir/src/graphics.cc.o"
   "CMakeFiles/cavestory.dir/src/input.cc.o"

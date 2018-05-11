@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/manuel/development/cavestory/src/animated_sprite.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/animated_sprite.cc.o"
   "/home/manuel/development/cavestory/src/game.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/game.cc.o"
   "/home/manuel/development/cavestory/src/graphics.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/graphics.cc.o"
   "/home/manuel/development/cavestory/src/input.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/input.cc.o"
