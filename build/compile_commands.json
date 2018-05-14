@@ -1,32 +1,37 @@
 [
 {
   "directory": "/home/manuel/development/cavestory/build",
-  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/animated_sprite.cc.o -c /home/manuel/development/cavestory/src/animated_sprite.cc",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/animated_sprite.cc.o -c /home/manuel/development/cavestory/src/animated_sprite.cc",
   "file": "/home/manuel/development/cavestory/src/animated_sprite.cc"
 },
 {
   "directory": "/home/manuel/development/cavestory/build",
-  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/game.cc.o -c /home/manuel/development/cavestory/src/game.cc",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/game.cc.o -c /home/manuel/development/cavestory/src/game.cc",
   "file": "/home/manuel/development/cavestory/src/game.cc"
 },
 {
   "directory": "/home/manuel/development/cavestory/build",
-  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/graphics.cc.o -c /home/manuel/development/cavestory/src/graphics.cc",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/graphics.cc.o -c /home/manuel/development/cavestory/src/graphics.cc",
   "file": "/home/manuel/development/cavestory/src/graphics.cc"
 },
 {
   "directory": "/home/manuel/development/cavestory/build",
-  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/input.cc.o -c /home/manuel/development/cavestory/src/input.cc",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/input.cc.o -c /home/manuel/development/cavestory/src/input.cc",
   "file": "/home/manuel/development/cavestory/src/input.cc"
 },
 {
   "directory": "/home/manuel/development/cavestory/build",
-  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/main.cc.o -c /home/manuel/development/cavestory/src/main.cc",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/main.cc.o -c /home/manuel/development/cavestory/src/main.cc",
   "file": "/home/manuel/development/cavestory/src/main.cc"
 },
 {
   "directory": "/home/manuel/development/cavestory/build",
-  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/sprite.cc.o -c /home/manuel/development/cavestory/src/sprite.cc",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/player.cc.o -c /home/manuel/development/cavestory/src/player.cc",
+  "file": "/home/manuel/development/cavestory/src/player.cc"
+},
+{
+  "directory": "/home/manuel/development/cavestory/build",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/sprite.cc.o -c /home/manuel/development/cavestory/src/sprite.cc",
   "file": "/home/manuel/development/cavestory/src/sprite.cc"
 }
 ]

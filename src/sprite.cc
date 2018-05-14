@@ -4,8 +4,8 @@ Sprite::Sprite() {}
 
 Sprite::Sprite(Graphics &graphics, const std::string &filepath, int sourceX, 
             int sourceY, int width, int height, double posX, double posY) :
-    x_(posX),
-    y_(posY) 
+    sprite_x_(posX),
+    sprite_y_(posY) 
 {
     this->source_rectangle_.x = sourceX;
     this->source_rectangle_.y = sourceY;

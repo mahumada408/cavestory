@@ -19,7 +19,7 @@ void Input::KeyPressedEvent(const SDL_Event& event) {
 // Also, because we are releasing a key, we need to clear the map event. 
 void Input::KeyReleasedEvent(const SDL_Event& event) {
     this->released_keys[event.key.keysym.scancode] = true;
-    this->released_keys[event.key.keysym.scancode] = false;
+    this->held_keys[event.key.keysym.scancode] = false;
 }
 
 // Key pressed event checker.

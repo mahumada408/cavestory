@@ -13,8 +13,8 @@ double time_to_update) :
     current_animation_("") {
 
     // Initialize offsets.
-    zero_offsets_.x = 0;
-    zero_offsets_.y = 0;
+    player_offsets_.x = 0;
+    player_offsets_.y = 0;
 
 }
 
@@ -103,16 +103,14 @@ void AnimatedSprite::AnimatedDraw(Graphics &graphics, int x, int y){
     }
 }
 
-void AnimatedSprite::AnimationDone(std::string current_animation_){}
+// // The implementation should be done in the class that inherits from AnimatedSprite.
+// void AnimatedSprite::SetupAnimation(){
+//     int num_frames = 3;
+//     int x_init = 0;
+//     int y_init = 0;
+//     int height = 16; // In pixels
+//     int width = 16; // In pixels
+//     this->AddAnimation(num_frames, x_init, y_init, "RunLeft", height, width, zero_offsets_);
+//     this->AddAnimation(num_frames, 0, 16, "RunRight", height, width, zero_offsets_);
 
-// The implementation should be done in the class that inherits from AnimatedSprite.
-void AnimatedSprite::SetupAnimation(){
-    int num_frames = 3;
-    int x_init = 0;
-    int y_init = 0;
-    int height = 16; // In pixels
-    int width = 16; // In pixels
-    this->AddAnimation(num_frames, x_init, y_init, "RunLeft", height, width, zero_offsets_);
-    this->AddAnimation(num_frames, 0, 16, "RunRight", height, width, zero_offsets_);
-
-}
+// }

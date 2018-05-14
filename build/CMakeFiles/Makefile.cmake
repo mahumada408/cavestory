@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.11.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.11.1/CMakeSystem.cmake"
   "../cmake/FindSDL2_image.cmake"
+  "/usr/lib/cmake/eigen3/Eigen3Config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake"
   "/usr/local/share/cmake-3.11/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.11/Modules/CMakeCXXInformation.cmake"

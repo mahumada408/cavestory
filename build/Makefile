@@ -655,6 +655,33 @@ src/main.cc.s:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/player.o: src/player.cc.o
+
+.PHONY : src/player.o
+
+# target to build an object file
+src/player.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/player.cc.o
+.PHONY : src/player.cc.o
+
+src/player.i: src/player.cc.i
+
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/player.cc.i
+.PHONY : src/player.cc.i
+
+src/player.s: src/player.cc.s
+
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/player.cc.s
+.PHONY : src/player.cc.s
+
 src/sprite.o: src/sprite.cc.o
 
 .PHONY : src/sprite.o
@@ -737,6 +764,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
 	@echo "... src/sprite.o"
 	@echo "... src/sprite.i"
 	@echo "... src/sprite.s"

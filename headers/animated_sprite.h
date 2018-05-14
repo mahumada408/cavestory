@@ -28,9 +28,6 @@ class AnimatedSprite : public Sprite {
         // Draws sprite to screen.
         void AnimatedDraw(Graphics &graphics, int x, int y);
 
-        // Sets up all the animations for a sprite. 
-        virtual void SetupAnimation();
-
         struct Vector2 {
             double x;
             double y;
@@ -60,7 +57,16 @@ class AnimatedSprite : public Sprite {
         void SetVisible(bool visible);
 
         // Logic that happens when an animation ends. 
-        virtual void AnimationDone(std::string current_animation_);
+        // Because it's == 0, it's a pure virtual method, and we can only 
+        // implement them in a derived classes. 
+        virtual void AnimationDone(std::string current_animation) = 0;
+
+        // Sets up all the animations for a sprite. 
+        // Because it's == 0, it's a pure virtual method, and we can only 
+        // implement them in a derived classes. 
+        virtual void SetupAnimation() = 0;
+
+        Vector2 player_offsets_;
 
     private:
         // Holds the animation for a sprite. For example, the running animation 
@@ -69,7 +75,7 @@ class AnimatedSprite : public Sprite {
 
         // Just in case we want to offset where we get our sprites from.
         std::map<std::string, Vector2> draw_offsets_;
-        Vector2 zero_offsets_;
+        
 
         // Which frame in the animatino we are at. 
         int frame_index_;

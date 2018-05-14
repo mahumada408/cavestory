@@ -30,6 +30,7 @@ class Sprite
     SDL_Texture* sprite_sheet;
     int sprite_scaler_;
 
+    double sprite_x_, sprite_y_;
   private:
-    double x_, y_;
+    
 };
