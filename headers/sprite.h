@@ -25,10 +25,11 @@ class Sprite
     // Draws sprite to screen.
     void Draw(Graphics &graphics, int x, int y);
 
-  private:
+  protected:
     SDL_Rect source_rectangle_;
     SDL_Texture* sprite_sheet;
-
-    double x_, y_;
     int sprite_scaler_;
+
+  private:
+    double x_, y_;
 };

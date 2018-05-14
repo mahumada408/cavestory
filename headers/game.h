@@ -1,6 +1,8 @@
 #pragma once
 
 #include <SDL2/SDL.h>
+
+#include "animated_sprite.h"
 #include "graphics.h"
 #include "input.h"
 #include "sprite.h"
@@ -18,5 +20,5 @@ class Game {
         void Draw(Graphics &graphics);
         void Update(double elapsed_time);
 
-        Sprite player_;
+        AnimatedSprite player_;
 };

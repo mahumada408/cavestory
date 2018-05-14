@@ -23,10 +23,10 @@ class AnimatedSprite : public Sprite {
         void PlayAnimation(std::string animation, bool once = false);
 
         // Updates the animated sprite on a timer. 
-        void Update(int elapsed_time);
+        void Update(double elapsed_time);
 
         // Draws sprite to screen.
-        void Draw(Graphics &graphics, int x, int y);
+        void AnimatedDraw(Graphics &graphics, int x, int y);
 
         // Sets up all the animations for a sprite. 
         virtual void SetupAnimation();
@@ -63,12 +63,13 @@ class AnimatedSprite : public Sprite {
         virtual void AnimationDone(std::string current_animation_);
 
     private:
-        // Holds the animatino for a sprite. For example, the running animation 
+        // Holds the animation for a sprite. For example, the running animation 
         // for the guy is three pictures. Hold those three pics in the vector. 
         std::map<std::string, std::vector<SDL_Rect>> animation_;
 
-        // Just in case we want to pffset where we get our sprites from.
-        std::map<std::string, Vector2> offsets_;
+        // Just in case we want to offset where we get our sprites from.
+        std::map<std::string, Vector2> draw_offsets_;
+        Vector2 zero_offsets_;
 
         // Which frame in the animatino we are at. 
         int frame_index_;

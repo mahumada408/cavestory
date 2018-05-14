@@ -23,6 +23,8 @@ sprite.h
 ../headers/game.h
 SDL2/SDL.h
 -
+animated_sprite.h
+../headers/animated_sprite.h
 graphics.h
 ../headers/graphics.h
 input.h

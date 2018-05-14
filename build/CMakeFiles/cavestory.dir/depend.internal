@@ -7,6 +7,7 @@ CMakeFiles/cavestory.dir/src/animated_sprite.cc.o
  ../headers/sprite.h
  /home/manuel/development/cavestory/src/animated_sprite.cc
 CMakeFiles/cavestory.dir/src/game.cc.o
+ ../headers/animated_sprite.h
  ../headers/game.h
  ../headers/graphics.h
  ../headers/input.h
@@ -19,6 +20,7 @@ CMakeFiles/cavestory.dir/src/input.cc.o
  ../headers/input.h
  /home/manuel/development/cavestory/src/input.cc
 CMakeFiles/cavestory.dir/src/main.cc.o
+ ../headers/animated_sprite.h
  ../headers/game.h
  ../headers/graphics.h
  ../headers/input.h
