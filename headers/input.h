@@ -13,9 +13,14 @@ class Input {
         void KeyPressedEvent(const SDL_Event& event);
         void KeyReleasedEvent(const SDL_Event& event);
 
-        // Event checkers
+        // Key pressed event checker.
         bool WasKeyPressed(SDL_Scancode key);
+
+        // Key released event checker
         bool WasKeyReleased(SDL_Scancode key);
+
+        // Need the currently held checker given that no events actually happen 
+        // when the key is held.
         bool IsKeyCurrentlyHeld(SDL_Scancode key);
 
     private:

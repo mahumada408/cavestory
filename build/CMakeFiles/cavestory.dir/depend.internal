@@ -11,6 +11,7 @@ CMakeFiles/cavestory.dir/src/game.cc.o
  ../headers/game.h
  ../headers/graphics.h
  ../headers/input.h
+ ../headers/level.h
  ../headers/player.h
  ../headers/sprite.h
  /home/manuel/development/cavestory/src/game.cc
@@ -20,11 +21,16 @@ CMakeFiles/cavestory.dir/src/graphics.cc.o
 CMakeFiles/cavestory.dir/src/input.cc.o
  ../headers/input.h
  /home/manuel/development/cavestory/src/input.cc
+CMakeFiles/cavestory.dir/src/level.cc.o
+ ../headers/graphics.h
+ ../headers/level.h
+ /home/manuel/development/cavestory/src/level.cc
 CMakeFiles/cavestory.dir/src/main.cc.o
  ../headers/animated_sprite.h
  ../headers/game.h
  ../headers/graphics.h
  ../headers/input.h
+ ../headers/level.h
  ../headers/player.h
  ../headers/sprite.h
  /home/manuel/development/cavestory/src/main.cc

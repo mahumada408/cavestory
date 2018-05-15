@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/cavestory.dir/src/game.cc.o"
   "CMakeFiles/cavestory.dir/src/graphics.cc.o"
   "CMakeFiles/cavestory.dir/src/input.cc.o"
+  "CMakeFiles/cavestory.dir/src/level.cc.o"
   "CMakeFiles/cavestory.dir/src/main.cc.o"
   "CMakeFiles/cavestory.dir/src/player.cc.o"
   "CMakeFiles/cavestory.dir/src/sprite.cc.o"

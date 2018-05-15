@@ -48,7 +48,6 @@ void Player::StopMoving() {
 void Player::PlayerUpdate(double elapsed_time) {
     // Move by dx based on the frame rate (elapsed time).
     this->sprite_x_ += this->dx_ * elapsed_time;
-    std::cout << "x: " << this->sprite_x_ << std::endl;
 
     AnimatedSprite::Update(elapsed_time);
 }

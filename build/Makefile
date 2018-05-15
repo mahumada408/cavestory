@@ -628,6 +628,33 @@ src/input.cc.s:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/input.cc.s
 .PHONY : src/input.cc.s
 
+src/level.o: src/level.cc.o
+
+.PHONY : src/level.o
+
+# target to build an object file
+src/level.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/level.cc.o
+.PHONY : src/level.cc.o
+
+src/level.i: src/level.cc.i
+
+.PHONY : src/level.i
+
+# target to preprocess a source file
+src/level.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/level.cc.i
+.PHONY : src/level.cc.i
+
+src/level.s: src/level.cc.s
+
+.PHONY : src/level.s
+
+# target to generate assembly for a file
+src/level.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/level.cc.s
+.PHONY : src/level.cc.s
+
 src/main.o: src/main.cc.o
 
 .PHONY : src/main.o
@@ -761,6 +788,9 @@ help:
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"
+	@echo "... src/level.o"
+	@echo "... src/level.i"
+	@echo "... src/level.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
