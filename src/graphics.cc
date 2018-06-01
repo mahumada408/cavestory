@@ -14,7 +14,8 @@ Graphics::Graphics()
 // Graphics class destructor
 Graphics::~Graphics()
 {
-    SDL_DestroyWindow(window_);
+    SDL_DestroyWindow(this->window_);
+    SDL_DestroyRenderer(this->renderer_);
 }
 
 SDL_Surface* Graphics::LoadImage(const std::string &filepath) {

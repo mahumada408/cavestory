@@ -682,6 +682,33 @@ src/main.cc.s:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/mvector2.o: src/mvector2.cc.o
+
+.PHONY : src/mvector2.o
+
+# target to build an object file
+src/mvector2.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/mvector2.cc.o
+.PHONY : src/mvector2.cc.o
+
+src/mvector2.i: src/mvector2.cc.i
+
+.PHONY : src/mvector2.i
+
+# target to preprocess a source file
+src/mvector2.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/mvector2.cc.i
+.PHONY : src/mvector2.cc.i
+
+src/mvector2.s: src/mvector2.cc.s
+
+.PHONY : src/mvector2.s
+
+# target to generate assembly for a file
+src/mvector2.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/mvector2.cc.s
+.PHONY : src/mvector2.cc.s
+
 src/player.o: src/player.cc.o
 
 .PHONY : src/player.o
@@ -735,6 +762,60 @@ src/sprite.s: src/sprite.cc.s
 src/sprite.cc.s:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/sprite.cc.s
 .PHONY : src/sprite.cc.s
+
+src/tile.o: src/tile.cc.o
+
+.PHONY : src/tile.o
+
+# target to build an object file
+src/tile.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/tile.cc.o
+.PHONY : src/tile.cc.o
+
+src/tile.i: src/tile.cc.i
+
+.PHONY : src/tile.i
+
+# target to preprocess a source file
+src/tile.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/tile.cc.i
+.PHONY : src/tile.cc.i
+
+src/tile.s: src/tile.cc.s
+
+.PHONY : src/tile.s
+
+# target to generate assembly for a file
+src/tile.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/tile.cc.s
+.PHONY : src/tile.cc.s
+
+src/tinyxml2.o: src/tinyxml2.cc.o
+
+.PHONY : src/tinyxml2.o
+
+# target to build an object file
+src/tinyxml2.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/tinyxml2.cc.o
+.PHONY : src/tinyxml2.cc.o
+
+src/tinyxml2.i: src/tinyxml2.cc.i
+
+.PHONY : src/tinyxml2.i
+
+# target to preprocess a source file
+src/tinyxml2.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/tinyxml2.cc.i
+.PHONY : src/tinyxml2.cc.i
+
+src/tinyxml2.s: src/tinyxml2.cc.s
+
+.PHONY : src/tinyxml2.s
+
+# target to generate assembly for a file
+src/tinyxml2.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/tinyxml2.cc.s
+.PHONY : src/tinyxml2.cc.s
 
 # Help Target
 help:
@@ -794,12 +875,21 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mvector2.o"
+	@echo "... src/mvector2.i"
+	@echo "... src/mvector2.s"
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
 	@echo "... src/sprite.o"
 	@echo "... src/sprite.i"
 	@echo "... src/sprite.s"
+	@echo "... src/tile.o"
+	@echo "... src/tile.i"
+	@echo "... src/tile.s"
+	@echo "... src/tinyxml2.o"
+	@echo "... src/tinyxml2.i"
+	@echo "... src/tinyxml2.s"
 .PHONY : help
 
 

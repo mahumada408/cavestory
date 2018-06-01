@@ -1,13 +1,16 @@
 #include "level.h"
+#include <iostream>
+
+using namespace tinyxml2;
 
 Level::Level() {}
 
 Level::Level(std::string map_name, 
-                Eigen::Vector2d spawn_point,
+                MVector2 spawn_point,
                 Graphics &graphics) : 
                 map_name_(map_name),
                 spawn_point_(spawn_point),
-                size_(Eigen::Vector2d::Zero()) {
+                size_(MVector2(0,0)) {
 
     this->LoadMap(map_name, graphics);
 }
@@ -16,15 +19,147 @@ Level::~Level() {}
 
 void Level::LoadMap(std::string map_name, Graphics &graphics)
 {
-    // TEMP CODE TO LOAD BACKGROUND
-    this->background_texture_ = SDL_CreateTextureFromSurface(graphics.GetRenderer(), graphics.LoadImage("/home/manuel/development/cavestory/content/backgrounds/bkBlue.png"));
+    // Parse the .tmx file
+    XMLDocument doc;
+    std::stringstream map_string;
+    // Our map name.
+    map_string << "/home/manuel/development/cavestory/content/maps/" << map_name << ".tmx";
+    
+    // Pass in our map to our doc (needs a c string).
+    doc.LoadFile(map_string.str().c_str());
 
-    if (this->background_texture_ == NULL) {
-        std::cout << "Error: Unable to load image." << std::endl;
+    XMLElement* map_node = doc.FirstChildElement("map");
+
+    // Get the width and height of the map and store it in size_.
+    int map_width, map_height;
+    map_node->QueryIntAttribute("width", &map_width);
+    map_node->QueryIntAttribute("height", &map_height);
+    //this->size_ << (double)map_width, (double)map_height;
+    this->size_.x = map_width;
+    this->size_.y = map_height;
+
+    // Get the width and height of the tile and store in tile_size_.
+    int tile_width, tile_height;
+    map_node->QueryIntAttribute("tilewidth", &tile_width);
+    map_node->QueryIntAttribute("tileheight", &tile_height);
+    this->tile_size_.x = tile_width;
+    this->tile_size_.y = tile_height;
+
+    // Load the tilesets.
+    XMLElement* pTileset = map_node->FirstChildElement("tileset");
+    if (pTileset != NULL) {
+        while (pTileset) {
+            int first_gid;
+
+            // Get source path of the tileset image.
+            const char* source = pTileset->FirstChildElement("image")->Attribute("source");
+
+            std::stringstream tileset_path;
+            tileset_path << source;
+            pTileset->QueryIntAttribute("firstgid", &first_gid);
+            SDL_Texture* tex = SDL_CreateTextureFromSurface(graphics.GetRenderer(), graphics.LoadImage(tileset_path.str()));
+            this->tile_sets.push_back(TileSet(tex, first_gid));
+
+            pTileset = pTileset->NextSiblingElement("tileset");
+        }
     }
 
-    // Use size when drawing background.
-    this->size_ << 1280, 960;
+    // Same thing as above 
+    // Load the layers
+    XMLElement* pLayer = map_node->FirstChildElement("layer");
+    if (pLayer != NULL) {
+        while (pLayer) {
+            // Loading the <data> element form the map
+            XMLElement* pData = pLayer->FirstChildElement("data");
+            // There could be more than one data elemt, so we go through all of them
+            if (pData != NULL) {
+                while (pData) {
+                    // Load the tile elements
+                    XMLElement* pTile = pData->FirstChildElement("tile");
+                    // Go through all the tiles
+                    if (pTile != NULL) {
+                        // Counter lets us know what tile we are on.
+                        int tile_counter = 0;
+                        while (pTile) {
+                            // Build each tile. 
+                            // If gid = 0, no tile should be drawn.
+                            if (pTile->IntAttribute("gid") == 0){
+                                // Still need to increment
+                                tile_counter++;
+                                // Check to see if we are at the end or not.
+                                if (pTile->NextSiblingElement("tile")) {
+                                    pTile = pTile->NextSiblingElement("tile");
+                                    continue;
+                                }
+                                else {
+                                    // Means we are at the end.
+                                    break;
+                                }
+                            }
+
+                            // Get tileset for this gid.
+                            int gid = pTile->IntAttribute("gid");
+                            TileSet tls;
+                            // Loop through the tileset.
+                            for (int i=0; i < this->tile_sets.size(); i++) {
+                                if (this->tile_sets[i].first_gid <= gid){
+                                    // This is the gid we want.
+                                    tls = this->tile_sets.at(i);
+                                    // Break the loop.
+                                    break;
+                                }
+                            }
+
+                            if (tls.first_gid == -1) {
+                                // No tileset was found for this gid.
+                                tile_counter++;
+                                if (pTile->NextSiblingElement("tile")) {
+                                    pTile = pTile->NextSiblingElement("tile");
+                                    // Force next iteration of the loop.
+                                    continue;
+                                }
+                                else {
+                                    // This means we are done.
+                                    break;
+                                }
+                            }
+
+                            // Get the position of the tile in the level.
+                            int xx = 0;
+                            int yy = 0;
+                            xx = tile_counter % map_width;
+                            xx *= tile_width;
+                            yy = tile_height * (tile_counter / map_width);
+                            MVector2 final_tile_position(xx, yy);
+
+                            // Calculate the position of the tile in the tileset.
+                            int tileset_width, tileset_height;
+                            SDL_QueryTexture(tls.texture, NULL, NULL, &tileset_width, &tileset_height);
+                            int tileset_xx = gid % (tileset_width / tile_width) - 1;
+                            tileset_xx *= tile_width;
+                            int tileset_yy = 0;
+                            tileset_yy = tile_height * (gid / (tileset_width / tile_width));
+                            MVector2 final_tileset_position(tileset_xx, tileset_yy);
+
+                            // Build the actual tile and add it to the level's tile list.
+                            MVector2 map_tile_size(tile_width, tile_height);
+                            Tile tile(tls.texture, map_tile_size, final_tileset_position, final_tile_position);
+                            this->tile_list_.push_back(tile);
+                            tile_counter++;
+
+                            pTile = pTile->NextSiblingElement("tile");
+                        }
+                    }
+
+                    pData = pData->NextSiblingElement("data");
+                }
+            }
+
+            // Same as above for the next iteration. loop though all the layers
+            pLayer = pLayer->NextSiblingElement("layer");
+        }
+    }
+
 }
 
 void Level::LevelUpdate(double elapsed_time) {}
@@ -32,22 +167,8 @@ void Level::LevelUpdate(double elapsed_time) {}
 void Level::LevelDraw(Graphics &graphics)
 {
     // Draw the background
-
-    // The source background image is 64x64 pixels.
-    SDL_Rect source_rect = {0, 0, 64, 64};
-
-    SDL_Rect destination_rect;
-
-    // Loop to draw over the entire 1280x960 display.
-    for (int i = 0; i < this->size_[0] / 64; i++)
-    {
-        for (int j = 0; j < this->size_[1] / 64; j++)
-        {
-            destination_rect.x = i * 64;
-            destination_rect.y = j * 64;
-            destination_rect.w = 64;
-            destination_rect.h = 64;
-            graphics.DrawToScreen(this->background_texture_, &source_rect, &destination_rect);
-        }
+    for (int i = 0; i < this->tile_list_.size(); i++) {
+        //std::cout << "drawing i: " << i << std::endl;
+        this->tile_list_.at(i).TileDraw(graphics);   
     }
 }

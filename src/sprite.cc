@@ -12,8 +12,6 @@ Sprite::Sprite(Graphics &graphics, const std::string &filepath, int sourceX,
     this->source_rectangle_.w = width;
     this->source_rectangle_.h = height;
 
-    sprite_scaler_ = 4;
-
     this->sprite_sheet = SDL_CreateTextureFromSurface(graphics.GetRenderer(), 
                                                 graphics.LoadImage(filepath));
 

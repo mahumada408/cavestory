@@ -1,9 +1,10 @@
 #pragma once
 
-#include "graphics.h"
 #include <iostream>
 #include <string>
 #include <SDL2/SDL.h>
+
+#include "graphics.h"
 
 // Forward declare graphics
 class Graphics;
@@ -25,12 +26,15 @@ class Sprite
     // Draws sprite to screen.
     void Draw(Graphics &graphics, int x, int y);
 
+    // Scales the size of the sprite;
+    static const int sprite_scaler_ = 2;
+
   protected:
     SDL_Rect source_rectangle_;
     SDL_Texture* sprite_sheet;
-    int sprite_scaler_;
 
     double sprite_x_, sprite_y_;
+    
   private:
     
 };

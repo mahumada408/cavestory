@@ -12,8 +12,11 @@ CMakeFiles/cavestory.dir/src/game.cc.o
  ../headers/graphics.h
  ../headers/input.h
  ../headers/level.h
+ ../headers/mvector2.h
  ../headers/player.h
  ../headers/sprite.h
+ ../headers/tile.h
+ ../headers/tinyxml2.h
  /home/manuel/development/cavestory/src/game.cc
 CMakeFiles/cavestory.dir/src/graphics.cc.o
  ../headers/graphics.h
@@ -24,6 +27,10 @@ CMakeFiles/cavestory.dir/src/input.cc.o
 CMakeFiles/cavestory.dir/src/level.cc.o
  ../headers/graphics.h
  ../headers/level.h
+ ../headers/mvector2.h
+ ../headers/sprite.h
+ ../headers/tile.h
+ ../headers/tinyxml2.h
  /home/manuel/development/cavestory/src/level.cc
 CMakeFiles/cavestory.dir/src/main.cc.o
  ../headers/animated_sprite.h
@@ -31,9 +38,15 @@ CMakeFiles/cavestory.dir/src/main.cc.o
  ../headers/graphics.h
  ../headers/input.h
  ../headers/level.h
+ ../headers/mvector2.h
  ../headers/player.h
  ../headers/sprite.h
+ ../headers/tile.h
+ ../headers/tinyxml2.h
  /home/manuel/development/cavestory/src/main.cc
+CMakeFiles/cavestory.dir/src/mvector2.cc.o
+ ../headers/mvector2.h
+ /home/manuel/development/cavestory/src/mvector2.cc
 CMakeFiles/cavestory.dir/src/player.cc.o
  ../headers/animated_sprite.h
  ../headers/graphics.h
@@ -44,3 +57,12 @@ CMakeFiles/cavestory.dir/src/sprite.cc.o
  ../headers/graphics.h
  ../headers/sprite.h
  /home/manuel/development/cavestory/src/sprite.cc
+CMakeFiles/cavestory.dir/src/tile.cc.o
+ ../headers/graphics.h
+ ../headers/mvector2.h
+ ../headers/sprite.h
+ ../headers/tile.h
+ /home/manuel/development/cavestory/src/tile.cc
+CMakeFiles/cavestory.dir/src/tinyxml2.cc.o
+ ../headers/tinyxml2.h
+ /home/manuel/development/cavestory/src/tinyxml2.cc

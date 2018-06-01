@@ -30,10 +30,9 @@ void Game::GameLoop()
     this->player_ = 
     Player(graphics, 100, 100);
 
-    this->level_ = Level("map 1", Eigen::Vector2d::Ones()*100, graphics);
+    this->level_ = Level("Map_1", MVector2(100,100), graphics);
 
     int last_update_time = SDL_GetTicks();
-
     // Start game loop
     while (true)
     {
@@ -67,7 +66,7 @@ void Game::GameLoop()
         double elapsed_time_ms = current_time_ms - last_update_time;
         this->Update(std::min(elapsed_time_ms, max_frame_time));
         last_update_time = current_time_ms;
-
+        
         this->Draw(graphics);
     }
 }

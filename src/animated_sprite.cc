@@ -93,8 +93,8 @@ void AnimatedSprite::AnimatedDraw(Graphics &graphics, int x, int y){
         SDL_Rect destination_rectangle;
         destination_rectangle.x = x + this->draw_offsets_[this->current_animation_].x;
         destination_rectangle.y = y + this->draw_offsets_[this->current_animation_].y;
-        destination_rectangle.w = this->source_rectangle_.w * sprite_scaler_;
-        destination_rectangle.h = this->source_rectangle_.h * sprite_scaler_;
+        destination_rectangle.w = this->source_rectangle_.w * this->sprite_scaler_;
+        destination_rectangle.h = this->source_rectangle_.h * this->sprite_scaler_;
 
         // Current animation indexes the map, frame index indexes the vector.
         SDL_Rect source_rect = this->animation_[this->current_animation_][this->frame_index_];

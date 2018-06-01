@@ -6,6 +6,7 @@
 #include "graphics.h"
 #include "input.h"
 #include "level.h"
+#include "mvector2.h"
 #include "player.h"
 #include "sprite.h"
 

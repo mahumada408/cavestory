@@ -10,8 +10,11 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/manuel/development/cavestory/src/input.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/input.cc.o"
   "/home/manuel/development/cavestory/src/level.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/level.cc.o"
   "/home/manuel/development/cavestory/src/main.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/main.cc.o"
+  "/home/manuel/development/cavestory/src/mvector2.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/mvector2.cc.o"
   "/home/manuel/development/cavestory/src/player.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/player.cc.o"
   "/home/manuel/development/cavestory/src/sprite.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/sprite.cc.o"
+  "/home/manuel/development/cavestory/src/tile.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/tile.cc.o"
+  "/home/manuel/development/cavestory/src/tinyxml2.cc" "/home/manuel/development/cavestory/build/CMakeFiles/cavestory.dir/src/tinyxml2.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
