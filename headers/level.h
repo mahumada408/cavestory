@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "graphics.h"
+#include "mrectangle.h"
 #include "mvector2.h"
 #include "sprite.h"
 #include "tile.h"
@@ -38,6 +39,8 @@ class Level {
         void LevelUpdate(double elapsed_time);
         void LevelDraw(Graphics &graphics);
 
+        std::vector<MRectangle> CheckTileCollisions(const MRectangle& other_rect);
+
     private:
         std::string map_name_;
         MVector2 spawn_point_;
@@ -46,6 +49,7 @@ class Level {
         SDL_Texture* background_texture_;
         std::vector<Tile> tile_list_;
         std::vector<TileSet> tile_sets;
+        std::vector<MRectangle> collision_rectangles;
 
         // Loads a map.
         void LoadMap(std::string map_name, Graphics &graphics);

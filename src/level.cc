@@ -160,6 +160,40 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
         }
     }
 
+    // Parse the collision elements. 
+    XMLElement* pObjectGroup = map_node->FirstChildElement("objectgroup");
+    if (pObjectGroup != NULL) {
+        while (pObjectGroup) {
+            const char* name = pObjectGroup->Attribute("name");
+            std::stringstream ss;
+            ss << name;
+            // Parse the collisions.
+            if (ss.str() == "collisions") {
+                XMLElement* pObject = pObjectGroup->FirstChildElement("object");
+                if (pObject != NULL) {
+                    while (pObject) {
+                        double x, y, width, height;
+                        x = pObject->DoubleAttribute("x");
+                        y = pObject->DoubleAttribute("y");
+                        width = pObject->DoubleAttribute("width");
+                        height = pObject->DoubleAttribute("height");
+                        this->collision_rectangles.push_back(MRectangle(
+                            std::ceil(x) * Sprite::sprite_scaler_, 
+                            std::ceil(y) * Sprite::sprite_scaler_, 
+                            std::ceil(width) * Sprite::sprite_scaler_, 
+                            std::ceil(height) * Sprite::sprite_scaler_));
+
+
+                        pObject = pObject->NextSiblingElement("object");
+                    }
+                }
+            }
+            // Other objectgroups go here with an else if (ss.str() == "whateva").
+
+            pObjectGroup = pObjectGroup->NextSiblingElement("objectgroup");
+        }
+    }
+
 }
 
 void Level::LevelUpdate(double elapsed_time) {}
@@ -171,4 +205,14 @@ void Level::LevelDraw(Graphics &graphics)
         //std::cout << "drawing i: " << i << std::endl;
         this->tile_list_.at(i).TileDraw(graphics);   
     }
+}
+
+std::vector<MRectangle> Level::CheckTileCollisions(const MRectangle& other_rect) {
+    std::vector<MRectangle> other;
+    for (int i = 0; i < this->collision_rectangles.size(); i++) {
+        if (this->collision_rectangles.at(i).CollidesWith(other_rect)) {
+            other.push_back(this->collision_rectangles.at(i));
+        }
+    }
+    return other;
 }
