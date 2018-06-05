@@ -5,16 +5,13 @@
 #include <SDL2/SDL.h>
 
 #include "graphics.h"
-
-// Forward declare graphics
-class Graphics;
+#include "mrectangle.h"
 
 // Sprite class
 // Holds all information for individual sprites. 
 // A sprite is basically a picture. 
 
-class Sprite
-{
+class Sprite {
   public:
     Sprite();
     Sprite(Graphics &graphics, const std::string &filepath, int sourceX, 
@@ -34,6 +31,8 @@ class Sprite
     SDL_Texture* sprite_sheet;
 
     double sprite_x_, sprite_y_;
+
+    MRectangle collision_box;
     
   private:
     

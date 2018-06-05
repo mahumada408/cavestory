@@ -7,6 +7,7 @@
 #include "input.h"
 #include "level.h"
 #include "mvector2.h"
+#include "mrectangle.h"
 #include "player.h"
 #include "sprite.h"
 

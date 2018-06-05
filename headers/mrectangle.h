@@ -1,6 +1,6 @@
 #pragma once
 
-#include "player.h"
+#include "sides.h"
 
 class MRectangle {
     public:
@@ -27,16 +27,16 @@ class MRectangle {
         const int GetBottom() const { return this->y_ + this->height_; }
 
         // Returns the side that we pass in.
-        const int GetSide(const Player::Side side) const {
+        const int GetSide(const Sides::Side side) const {
             return 
                 // If side is equal to the left side, return left side.
-                side == Player::Side::LEFT_SIDE ? this->GetLeft():
+                side == Sides::Side::LEFT_SIDE ? this->GetLeft():
                 // Elseif
-                side == Player::Side::RIGHT_SIDE ? this->GetRight():
-                side == Player::Side::TOP_SIDE ? this->GetTop():
-                side == Player::Side::BOTTOM_SIDE ? this-> GetBottom():
+                side == Sides::Side::RIGHT_SIDE ? this->GetRight():
+                side == Sides::Side::TOP_SIDE ? this->GetTop():
+                side == Sides::Side::BOTTOM_SIDE ? this-> GetBottom():
                 // Else
-                Player::Side::NONE_SIDE;
+                Sides::Side::NONE_SIDE;
         }
 
         // Takes in another rectangle and checks if the two are colliding.

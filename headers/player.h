@@ -34,16 +34,6 @@ class Player : public AnimatedSprite {
             DOWN
         };
 
-        enum Side {
-            TOP_SIDE, 
-            BOTTOM_SIDE, 
-            LEFT_SIDE, 
-            RIGHT_SIDE, 
-            NONE_SIDE
-        };
-
-        const Side GetOppositeSide(Side side);
-
     private:
         // Change in x and y;
         double dx_, dy_;

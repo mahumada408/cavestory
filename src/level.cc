@@ -57,7 +57,7 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
             std::stringstream tileset_path;
             tileset_path << source;
             pTileset->QueryIntAttribute("firstgid", &first_gid);
-            SDL_Texture* tex = SDL_CreateTextureFromSurface(graphics.GetRenderer(), graphics.LoadImage(tileset_path.str()));
+            SDL_Texture *tex = SDL_CreateTextureFromSurface(graphics.GetRenderer(), graphics.LoadImage(tileset_path.str()));
             this->tile_sets.push_back(TileSet(tex, first_gid));
 
             pTileset = pTileset->NextSiblingElement("tileset");

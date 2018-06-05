@@ -33,6 +33,8 @@ level.h
 ../headers/level.h
 mvector2.h
 ../headers/mvector2.h
+mrectangle.h
+../headers/mrectangle.h
 player.h
 ../headers/player.h
 sprite.h
@@ -85,8 +87,8 @@ tinyxml2.h
 ../headers/tinyxml2.h
 
 ../headers/mrectangle.h
-player.h
-../headers/player.h
+sides.h
+../headers/sides.h
 
 ../headers/mvector2.h
 vector
@@ -98,6 +100,8 @@ animated_sprite.h
 graphics.h
 ../headers/graphics.h
 
+../headers/sides.h
+
 ../headers/sprite.h
 iostream
 -
@@ -107,6 +111,8 @@ SDL2/SDL.h
 -
 graphics.h
 ../headers/graphics.h
+mrectangle.h
+../headers/mrectangle.h
 
 ../headers/tile.h
 SDL2/SDL.h
