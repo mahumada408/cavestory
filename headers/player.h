@@ -2,6 +2,9 @@
 
 #include "animated_sprite.h"
 #include "graphics.h"
+#include "mrectangle.h"
+#include "sides.h"
+#include "sprite.h"
 
 class Player : public AnimatedSprite {
     public:
@@ -22,6 +25,9 @@ class Player : public AnimatedSprite {
 
         virtual void AnimationDone(std::string current_animation);
         virtual void SetupAnimation();
+
+        // Handles collisions of all tiles the player is colliding with.
+        void HandleTileCollisions(std::vector<MRectangle>& colliding_rectangle);
 
         // Gets the current position of the player in x and y.
         const double GetX() const;

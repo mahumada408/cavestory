@@ -177,7 +177,7 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
                         y = pObject->DoubleAttribute("y");
                         width = pObject->DoubleAttribute("width");
                         height = pObject->DoubleAttribute("height");
-                        this->collision_rectangles.push_back(MRectangle(
+                        this->collision_rectangles_.push_back(MRectangle(
                             std::ceil(x) * Sprite::sprite_scaler_, 
                             std::ceil(y) * Sprite::sprite_scaler_, 
                             std::ceil(width) * Sprite::sprite_scaler_, 
@@ -209,9 +209,9 @@ void Level::LevelDraw(Graphics &graphics)
 
 std::vector<MRectangle> Level::CheckTileCollisions(const MRectangle& other_rect) {
     std::vector<MRectangle> other;
-    for (int i = 0; i < this->collision_rectangles.size(); i++) {
-        if (this->collision_rectangles.at(i).CollidesWith(other_rect)) {
-            other.push_back(this->collision_rectangles.at(i));
+    for (int i = 0; i < this->collision_rectangles_.size(); i++) {
+        if (this->collision_rectangles_.at(i).CollidesWith(other_rect)) {
+            other.push_back(this->collision_rectangles_.at(i));
         }
     }
     return other;

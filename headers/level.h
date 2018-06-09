@@ -49,7 +49,7 @@ class Level {
         SDL_Texture* background_texture_;
         std::vector<Tile> tile_list_;
         std::vector<TileSet> tile_sets;
-        std::vector<MRectangle> collision_rectangles;
+        std::vector<MRectangle> collision_rectangles_;
 
         // Loads a map.
         void LoadMap(std::string map_name, Graphics &graphics);

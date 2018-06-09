@@ -1,5 +1,4 @@
 #include "player.h"
-#include "graphics.h"
 
 namespace player_constants {
     const double WALK_SPEED = 0.2;
@@ -69,6 +68,35 @@ void Player::SetupAnimation() {
     this->AddAnimation(animation_frames, 0, 16, "RunRight", height, width, this->player_offsets_);
     this->AddAnimation(1, 0, 0, "IdleLeft", height, width, this->player_offsets_);
     this->AddAnimation(1, 0, 16, "IdleRight", height, width, this->player_offsets_);
+}
+
+void Player::HandleTileCollisions(std::vector<MRectangle>& colliding_rectangle) {
+    // Figure out what side the collision happened on and move the player accordingly.
+    for (int i = 0; i < colliding_rectangle.size(); i++) {
+        const Sides::Side collision_side = Sprite::GetCollisionSide(colliding_rectangle.at(i));
+        switch (collision_side)
+        {
+        // Reminder, (0,0) is defined at the top left of the game screen.
+        case Sides::Side::TOP_SIDE:
+            this->sprite_y_ = colliding_rectangle.at(i).GetBottom();
+            this->dy_ = 0.0;
+            break;
+        case Sides::Side::BOTTOM_SIDE:
+            this->sprite_y_ = colliding_rectangle.at(i).GetTop() - this->collision_box.GetHeight();
+            this->dy_ = 0.0;
+            break;
+        case Sides::Side::RIGHT_SIDE:
+            this->sprite_x_ = colliding_rectangle.at(i).GetLeft() - this->collision_box.GetWidth();
+            this->dx_ = 0.0;
+            break;
+        case Sides::Side::LEFT_SIDE:
+            this->sprite_x_ = colliding_rectangle.at(i).GetRight();
+            this->dx_ = 0.0;
+            break;
+        case Sides::Side::NONE_SIDE:
+            break;
+        }
+    }
 }
 
 const double Player::GetX() const {

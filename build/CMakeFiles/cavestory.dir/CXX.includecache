@@ -99,10 +99,20 @@ animated_sprite.h
 ../headers/animated_sprite.h
 graphics.h
 ../headers/graphics.h
+mrectangle.h
+../headers/mrectangle.h
+sides.h
+../headers/sides.h
+sprite.h
+../headers/sprite.h
 
 ../headers/sides.h
 
 ../headers/sprite.h
+algorithm
+-
+cmath
+-
 iostream
 -
 string
@@ -113,6 +123,8 @@ graphics.h
 ../headers/graphics.h
 mrectangle.h
 ../headers/mrectangle.h
+sides.h
+../headers/sides.h
 
 ../headers/tile.h
 SDL2/SDL.h
@@ -191,8 +203,6 @@ mvector2.h
 /home/manuel/development/cavestory/src/player.cc
 player.h
 /home/manuel/development/cavestory/src/player.h
-graphics.h
-/home/manuel/development/cavestory/src/graphics.h
 
 /home/manuel/development/cavestory/src/sprite.cc
 sprite.h
