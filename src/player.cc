@@ -77,26 +77,30 @@ void Player::HandleTileCollisions(std::vector<MRectangle>& colliding_rectangle) 
         switch (collision_side)
         {
         // Reminder, (0,0) is defined at the top left of the game screen.
+        // FYI, you need the "plus 1" to offset the collision box from colliding rectangle so that you dont get stuck.
         case Sides::Side::TOP_SIDE:
-            this->sprite_y_ = colliding_rectangle.at(i).GetBottom();
+            this->sprite_y_ = colliding_rectangle.at(i).GetBottom() + 1;
             this->dy_ = 0.0;
             break;
         case Sides::Side::BOTTOM_SIDE:
-            this->sprite_y_ = colliding_rectangle.at(i).GetTop() - this->collision_box.GetHeight();
+            this->sprite_y_ = colliding_rectangle.at(i).GetTop() - this->collision_box.GetHeight() -1;
             this->dy_ = 0.0;
             break;
         case Sides::Side::RIGHT_SIDE:
-            this->sprite_x_ = colliding_rectangle.at(i).GetLeft() - this->collision_box.GetWidth();
+            this->sprite_x_ = colliding_rectangle.at(i).GetLeft() - this->collision_box.GetWidth() - 1;
             this->dx_ = 0.0;
+            std::cout << "right collision." << std::endl;
             break;
         case Sides::Side::LEFT_SIDE:
-            this->sprite_x_ = colliding_rectangle.at(i).GetRight();
+            this->sprite_x_ = colliding_rectangle.at(i).GetRight() + 1;
             this->dx_ = 0.0;
+            std::cout << "left collision." << std::endl;
             break;
         case Sides::Side::NONE_SIDE:
             break;
-        }
+        }   
     }
+    std::cout << "lx: " << this->sprite_x_ << "rx: " << this->sprite_x_ + this->collision_box.GetWidth() << std::endl;
 }
 
 const double Player::GetX() const {
