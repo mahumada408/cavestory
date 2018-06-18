@@ -89,18 +89,16 @@ void Player::HandleTileCollisions(std::vector<MRectangle>& colliding_rectangle) 
         case Sides::Side::RIGHT_SIDE:
             this->sprite_x_ = colliding_rectangle.at(i).GetLeft() - this->collision_box.GetWidth() - 1;
             this->dx_ = 0.0;
-            std::cout << "right collision." << std::endl;
             break;
         case Sides::Side::LEFT_SIDE:
             this->sprite_x_ = colliding_rectangle.at(i).GetRight() + 1;
             this->dx_ = 0.0;
-            std::cout << "left collision." << std::endl;
             break;
         case Sides::Side::NONE_SIDE:
             break;
         }   
     }
-    std::cout << "lx: " << this->sprite_x_ << "rx: " << this->sprite_x_ + this->collision_box.GetWidth() << std::endl;
+    //std::cout << "lx: " << this->sprite_x_ << "rx: " << this->sprite_x_ + this->collision_box.GetWidth() << std::endl;
 }
 
 const double Player::GetX() const {

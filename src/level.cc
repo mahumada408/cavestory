@@ -177,12 +177,13 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
                         y = pObject->DoubleAttribute("y");
                         width = pObject->DoubleAttribute("width");
                         height = pObject->DoubleAttribute("height");
+                        int id = pObject->IntAttribute("id");
                         this->collision_rectangles_.push_back(MRectangle(
                             std::ceil(x) * Sprite::sprite_scaler_, 
                             std::ceil(y) * Sprite::sprite_scaler_, 
                             std::ceil(width) * Sprite::sprite_scaler_, 
-                            std::ceil(height) * Sprite::sprite_scaler_));
-
+                            std::ceil(height) * Sprite::sprite_scaler_, 
+                            id));
 
                         pObject = pObject->NextSiblingElement("object");
                     }
@@ -198,12 +199,24 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
 
 void Level::LevelUpdate(double elapsed_time) {}
 
-void Level::LevelDraw(Graphics &graphics)
+void Level::LevelDraw(Graphics& graphics)
 {
     // Draw the background
     for (int i = 0; i < this->tile_list_.size(); i++) {
         //std::cout << "drawing i: " << i << std::endl;
         this->tile_list_.at(i).TileDraw(graphics);   
+    }
+}
+
+void Level::CollisionDraw(Graphics& graphics) 
+{
+    for (int i = 0; i < this->collision_rectangles_.size(); i++)
+    {
+        SDL_Rect dest_rect = {this->collision_rectangles_.at(i).GetLeft(),
+                              this->collision_rectangles_.at(i).GetTop(),
+                              this->collision_rectangles_.at(i).GetWidth(),  // width 
+                              this->collision_rectangles_.at(i).GetHeight()}; // height
+        graphics.DrawRect(&dest_rect);
     }
 }
 

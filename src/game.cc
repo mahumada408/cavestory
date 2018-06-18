@@ -103,7 +103,9 @@ void Game::Draw(Graphics &graphics) {
 
     // Draw whatever cool stuff we have to the screen. Make sure to draw level 
     // before player so he gets drawn on top of the level.
+
     this->level_.LevelDraw(graphics);
+    this->level_.CollisionDraw(graphics);
     this->player_.PlayerDraw(graphics);
 
     // To actually draw it on the screen from the renderer.

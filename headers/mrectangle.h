@@ -2,14 +2,18 @@
 
 #include "sides.h"
 
+// Class to implement a rectangle and does some simple collision checking 
+// between two rectangles. 
+
 class MRectangle {
     public:
         MRectangle(){};
 
-        MRectangle(int x, int y, int width, int height) : x_(x),
+        MRectangle(int x, int y, int width, int height, int id = 0) : x_(x),
                                                           y_(y),
                                                           width_(width),
-                                                          height_(height){};
+                                                          height_(height), 
+                                                          id_(id){};
 
         // Returns the x value located at the center of the rectangle.
         const int GetCenterX() const { return this->x_ + this->width_/2; }
@@ -61,4 +65,5 @@ class MRectangle {
         int y_;
         int width_;
         int height_;
+        int id_;
 };

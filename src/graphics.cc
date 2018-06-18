@@ -33,6 +33,16 @@ void Graphics::DrawToScreen(SDL_Texture* texture, SDL_Rect* source_rectangle,
     SDL_RenderCopy(this->renderer_, texture, source_rectangle, destination_rectangle);
 }
 
+void Graphics::DrawRect(SDL_Rect* rectangle) {
+    // Change color to blue!
+    SDL_SetRenderDrawColor(this->renderer_, 0, 0, 255, 255);
+
+    // Draw rectangle to screen.
+    SDL_RenderFillRect(this->renderer_, rectangle);
+
+    //SDL_RenderPresent(this->renderer_);
+}
+
 void Graphics::Flip() {
     // Actually draws it to the screen.
     SDL_RenderPresent(this->renderer_);

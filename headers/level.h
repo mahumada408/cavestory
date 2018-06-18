@@ -37,7 +37,8 @@ class Level {
         ~Level();
 
         void LevelUpdate(double elapsed_time);
-        void LevelDraw(Graphics &graphics);
+        void LevelDraw(Graphics& graphics);
+        void CollisionDraw(Graphics& graphics);
 
         std::vector<MRectangle> CheckTileCollisions(const MRectangle& other_rect);
 

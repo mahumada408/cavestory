@@ -30,6 +30,9 @@ public:
   // screen. 
   void DrawToScreen(SDL_Texture* texture, SDL_Rect* source_rectangle, 
                     SDL_Rect* destination_rectangle);
+
+  // Draws a simple rectangle to the screen.
+  void DrawRect(SDL_Rect* rectangle);
   
   // Renders everything to the screen.
   void Flip();
