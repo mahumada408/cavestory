@@ -27,10 +27,8 @@ void Game::GameLoop()
     Input key_input;
     SDL_Event sdl_event;
 
-    this->player_ = 
-    Player(graphics, 280, 252);
-
     this->level_ = Level("Map_1", MVector2(100,100), graphics);
+    this->player_ = Player(graphics, this->level_.GetPlayerSpawnPoint());
 
     int last_update_time = SDL_GetTicks();
     // Start game loop
@@ -105,7 +103,7 @@ void Game::Draw(Graphics &graphics) {
     // before player so he gets drawn on top of the level.
 
     this->level_.LevelDraw(graphics);
-    this->level_.CollisionDraw(graphics);
+    // this->level_.CollisionDraw(graphics);
     this->player_.PlayerDraw(graphics);
 
     // To actually draw it on the screen from the renderer.

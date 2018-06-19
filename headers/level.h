@@ -42,6 +42,9 @@ class Level {
 
         std::vector<MRectangle> CheckTileCollisions(const MRectangle& other_rect);
 
+        // Gets the spawn point of the player that is called out in the Map.tmx file. 
+        const MVector2 GetPlayerSpawnPoint() const;
+
     private:
         std::string map_name_;
         MVector2 spawn_point_;

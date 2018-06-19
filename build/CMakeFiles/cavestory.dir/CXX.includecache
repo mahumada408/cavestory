@@ -101,6 +101,8 @@ graphics.h
 ../headers/graphics.h
 mrectangle.h
 ../headers/mrectangle.h
+mvector2.h
+../headers/mvector2.h
 sides.h
 ../headers/sides.h
 sprite.h

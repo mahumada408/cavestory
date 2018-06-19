@@ -160,7 +160,7 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
         }
     }
 
-    // Parse the collision elements. 
+    // Parse the object groups such as collisions and spawn points.
     XMLElement* pObjectGroup = map_node->FirstChildElement("objectgroup");
     if (pObjectGroup != NULL) {
         while (pObjectGroup) {
@@ -188,6 +188,25 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
                         pObject = pObject->NextSiblingElement("object");
                     }
                 }
+            } 
+            // Get the spawn point for the level.
+            else if (ss.str() == "spawn points") {
+                XMLElement* pObject = pObjectGroup->FirstChildElement("object");
+                if (pObject != nullptr) {
+                    while (pObject) {
+                        double spawn_x = pObject->DoubleAttribute("x");
+                        double spawn_y = pObject->DoubleAttribute("y");
+                        const char* name = pObject->Attribute("name");
+                        std::stringstream spawn_name;
+                        spawn_name << name;
+                        if (spawn_name.str() == "player") {
+                            this->spawn_point_ = MVector2(std::ceil(spawn_x) * Sprite::sprite_scaler_,
+                                                          std::ceil(spawn_y) * Sprite::sprite_scaler_);
+                        }
+                        pObject = pObject->NextSiblingElement("object");
+                    }
+                }
+
             }
             // Other objectgroups go here with an else if (ss.str() == "whateva").
 
@@ -229,3 +248,5 @@ std::vector<MRectangle> Level::CheckTileCollisions(const MRectangle& other_rect)
     }
     return other;
 }
+
+const MVector2 Level::GetPlayerSpawnPoint() const { return this->spawn_point_; }

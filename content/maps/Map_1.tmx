@@ -672,4 +672,9 @@
   <object id="28" x="192.108" y="90.3928" width="36.9367" height="5.19712"/>
   <object id="29" x="226.075" y="96.5179" width="11.8791" height="4.45467"/>
  </objectgroup>
+ <objectgroup color="#00ff00" name="spawn points">
+  <object id="17" name="player" x="158.337" y="136.764" width="2.57298" height="2.77091">
+   <ellipse/>
+  </object>
+ </objectgroup>
 </map>

@@ -3,6 +3,7 @@
 #include "animated_sprite.h"
 #include "graphics.h"
 #include "mrectangle.h"
+#include "mvector2.h"
 #include "sides.h"
 #include "sprite.h"
 
@@ -10,7 +11,7 @@ class Player : public AnimatedSprite {
     public:
         // Comments for this can be found in animated_sprite.h
         Player();
-        Player(Graphics &graphics, double x, double y);
+        Player(Graphics &graphics, MVector2 spawn_point);
         void PlayerDraw(Graphics &graphics);
         void PlayerUpdate(double elapsed_time);
 

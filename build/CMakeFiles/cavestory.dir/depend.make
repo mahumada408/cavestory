@@ -58,6 +58,7 @@ CMakeFiles/cavestory.dir/src/mvector2.cc.o: ../src/mvector2.cc
 CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/animated_sprite.h
 CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/graphics.h
 CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/mrectangle.h
+CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/mvector2.h
 CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/player.h
 CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/sides.h
 CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/sprite.h

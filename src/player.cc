@@ -8,8 +8,8 @@ namespace player_constants {
 
 Player::Player() {}
 
-Player::Player(Graphics &graphics, double x, double y) : 
-    AnimatedSprite(graphics, "/home/manuel/development/cavestory/content/sprites/MyChar.png", 0, 0, 16, 16, x, y, 100), 
+Player::Player(Graphics &graphics, MVector2 spawn_point) : 
+    AnimatedSprite(graphics, "/home/manuel/development/cavestory/content/sprites/MyChar.png", 0, 0, 16, 16, spawn_point.x, spawn_point.y, 100), 
     dx_(0), 
     dy_(0), 
     facing_(RIGHT),
