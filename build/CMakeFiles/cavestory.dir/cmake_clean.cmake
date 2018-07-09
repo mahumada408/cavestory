@@ -7,9 +7,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/cavestory.dir/src/main.cc.o"
   "CMakeFiles/cavestory.dir/src/mvector2.cc.o"
   "CMakeFiles/cavestory.dir/src/player.cc.o"
+  "CMakeFiles/cavestory.dir/src/slope.cc.o"
   "CMakeFiles/cavestory.dir/src/sprite.cc.o"
   "CMakeFiles/cavestory.dir/src/tile.cc.o"
   "CMakeFiles/cavestory.dir/src/tinyxml2.cc.o"
+  "CMakeFiles/cavestory.dir/src/utils.cc.o"
   "cavestory.pdb"
   "cavestory"
 )

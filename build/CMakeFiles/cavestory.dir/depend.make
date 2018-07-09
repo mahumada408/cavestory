@@ -64,6 +64,12 @@ CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/sides.h
 CMakeFiles/cavestory.dir/src/player.cc.o: ../headers/sprite.h
 CMakeFiles/cavestory.dir/src/player.cc.o: ../src/player.cc
 
+CMakeFiles/cavestory.dir/src/slope.cc.o: ../headers/mrectangle.h
+CMakeFiles/cavestory.dir/src/slope.cc.o: ../headers/mvector2.h
+CMakeFiles/cavestory.dir/src/slope.cc.o: ../headers/sides.h
+CMakeFiles/cavestory.dir/src/slope.cc.o: ../headers/slope.h
+CMakeFiles/cavestory.dir/src/slope.cc.o: ../src/slope.cc
+
 CMakeFiles/cavestory.dir/src/sprite.cc.o: ../headers/graphics.h
 CMakeFiles/cavestory.dir/src/sprite.cc.o: ../headers/mrectangle.h
 CMakeFiles/cavestory.dir/src/sprite.cc.o: ../headers/sides.h
@@ -80,4 +86,7 @@ CMakeFiles/cavestory.dir/src/tile.cc.o: ../src/tile.cc
 
 CMakeFiles/cavestory.dir/src/tinyxml2.cc.o: ../headers/tinyxml2.h
 CMakeFiles/cavestory.dir/src/tinyxml2.cc.o: ../src/tinyxml2.cc
+
+CMakeFiles/cavestory.dir/src/utils.cc.o: ../headers/utils.h
+CMakeFiles/cavestory.dir/src/utils.cc.o: ../src/utils.cc
 

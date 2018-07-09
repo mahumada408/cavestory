@@ -41,6 +41,11 @@
 },
 {
   "directory": "/home/manuel/development/cavestory/build",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/slope.cc.o -c /home/manuel/development/cavestory/src/slope.cc",
+  "file": "/home/manuel/development/cavestory/src/slope.cc"
+},
+{
+  "directory": "/home/manuel/development/cavestory/build",
   "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/sprite.cc.o -c /home/manuel/development/cavestory/src/sprite.cc",
   "file": "/home/manuel/development/cavestory/src/sprite.cc"
 },
@@ -53,5 +58,10 @@
   "directory": "/home/manuel/development/cavestory/build",
   "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/tinyxml2.cc.o -c /home/manuel/development/cavestory/src/tinyxml2.cc",
   "file": "/home/manuel/development/cavestory/src/tinyxml2.cc"
+},
+{
+  "directory": "/home/manuel/development/cavestory/build",
+  "command": "/usr/bin/clang++-3.8   -I/home/manuel/development/cavestory/headers -I/usr/include/SDL2 -I/usr/include/eigen3  -g   -std=gnu++11 -o CMakeFiles/cavestory.dir/src/utils.cc.o -c /home/manuel/development/cavestory/src/utils.cc",
+  "file": "/home/manuel/development/cavestory/src/utils.cc"
 }
 ]

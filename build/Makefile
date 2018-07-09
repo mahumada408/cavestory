@@ -736,6 +736,33 @@ src/player.cc.s:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/player.cc.s
 .PHONY : src/player.cc.s
 
+src/slope.o: src/slope.cc.o
+
+.PHONY : src/slope.o
+
+# target to build an object file
+src/slope.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/slope.cc.o
+.PHONY : src/slope.cc.o
+
+src/slope.i: src/slope.cc.i
+
+.PHONY : src/slope.i
+
+# target to preprocess a source file
+src/slope.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/slope.cc.i
+.PHONY : src/slope.cc.i
+
+src/slope.s: src/slope.cc.s
+
+.PHONY : src/slope.s
+
+# target to generate assembly for a file
+src/slope.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/slope.cc.s
+.PHONY : src/slope.cc.s
+
 src/sprite.o: src/sprite.cc.o
 
 .PHONY : src/sprite.o
@@ -817,6 +844,33 @@ src/tinyxml2.cc.s:
 	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/tinyxml2.cc.s
 .PHONY : src/tinyxml2.cc.s
 
+src/utils.o: src/utils.cc.o
+
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cc.o:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/utils.cc.o
+.PHONY : src/utils.cc.o
+
+src/utils.i: src/utils.cc.i
+
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cc.i:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/utils.cc.i
+.PHONY : src/utils.cc.i
+
+src/utils.s: src/utils.cc.s
+
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cc.s:
+	$(MAKE) -f CMakeFiles/cavestory.dir/build.make CMakeFiles/cavestory.dir/src/utils.cc.s
+.PHONY : src/utils.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -881,6 +935,9 @@ help:
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
+	@echo "... src/slope.o"
+	@echo "... src/slope.i"
+	@echo "... src/slope.s"
 	@echo "... src/sprite.o"
 	@echo "... src/sprite.i"
 	@echo "... src/sprite.s"
@@ -890,6 +947,9 @@ help:
 	@echo "... src/tinyxml2.o"
 	@echo "... src/tinyxml2.i"
 	@echo "... src/tinyxml2.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 

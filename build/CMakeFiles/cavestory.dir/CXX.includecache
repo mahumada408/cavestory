@@ -110,6 +110,16 @@ sprite.h
 
 ../headers/sides.h
 
+../headers/slope.h
+boost/math/special_functions/sign.hpp
+-
+cmath
+-
+mrectangle.h
+../headers/mrectangle.h
+mvector2.h
+../headers/mvector2.h
+
 ../headers/sprite.h
 algorithm
 -
@@ -170,6 +180,12 @@ android/log.h
 assert.h
 -
 
+../headers/utils.h
+string
+-
+vector
+-
+
 /home/manuel/development/cavestory/src/animated_sprite.cc
 animated_sprite.h
 /home/manuel/development/cavestory/src/animated_sprite.h
@@ -206,6 +222,10 @@ mvector2.h
 player.h
 /home/manuel/development/cavestory/src/player.h
 
+/home/manuel/development/cavestory/src/slope.cc
+slope.h
+/home/manuel/development/cavestory/src/slope.h
+
 /home/manuel/development/cavestory/src/sprite.cc
 sprite.h
 /home/manuel/development/cavestory/src/sprite.h
@@ -227,4 +247,8 @@ cstddef
 -
 cstdarg
 -
+
+/home/manuel/development/cavestory/src/utils.cc
+utils.h
+/home/manuel/development/cavestory/src/utils.h
 
