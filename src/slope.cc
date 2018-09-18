@@ -14,9 +14,9 @@ Slope::Slope(MVector2 point1, MVector2 point2) :
 
 const bool Slope::CollidesWidth(MRectangle& colliding_rectangle) const {
     
-    // Using the magnitude of a 2D vector cross product to detect if any of our corner points collide with the slope. 
-    // position = sign((Bx - Ax) * (Y - Ay) - (By - Ay) * (X - Ax))
-    // v1.x*v2.y - v1.y*v2.x
-    // It is 0 on the line (collision), and +1 on one side, -1 on the other side.  
-    return true;
+    return (colliding_rectangle.GetRight() >= this->point2_.x &&
+            colliding_rectangle.GetLeft() <= this->point1_.x &&
+            colliding_rectangle.GetTop() <= this->point2_.y && 
+            colliding_rectangle.GetBottom() >= this->point1_.y);
+            
 }
