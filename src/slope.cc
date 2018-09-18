@@ -17,6 +17,17 @@ const bool Slope::CollidesWidth(MRectangle& colliding_rectangle) const {
     return (colliding_rectangle.GetRight() >= this->point2_.x &&
             colliding_rectangle.GetLeft() <= this->point1_.x &&
             colliding_rectangle.GetTop() <= this->point2_.y && 
-            colliding_rectangle.GetBottom() >= this->point1_.y);
-            
+            colliding_rectangle.GetBottom() >= this->point1_.y) || 
+            (colliding_rectangle.GetRight() <= this->point1_.x &&
+            colliding_rectangle.GetLeft() <= this->point2_.x && 
+            colliding_rectangle.GetTop() <= this->point1_.y && 
+            colliding_rectangle.GetBottom() >= this->point2_.y) ||
+            (colliding_rectangle.GetLeft() <= this->point1_.x &&
+            colliding_rectangle.GetRight() >= this->point2_.x &&
+            colliding_rectangle.GetTop() <= this->point1_.y &&
+            colliding_rectangle.GetBottom() >= this->point2_.y) ||
+            (colliding_rectangle.GetLeft() <= this->point2_.x &&
+            colliding_rectangle.GetRight() >= this->point1_.x && 
+            colliding_rectangle.GetTop() <= this->point2_.y &&
+            colliding_rectangle.GetBottom() <= this->point1_.y);
 }

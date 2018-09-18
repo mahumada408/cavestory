@@ -12,9 +12,11 @@
 #include "graphics.h"
 #include "mrectangle.h"
 #include "mvector2.h"
+#include "slope.h"
 #include "sprite.h"
 #include "tile.h"
 #include "tinyxml2.h"
+#include "utils.h"
 
 // Tileset stucture
 struct TileSet {
@@ -41,6 +43,7 @@ class Level {
         void CollisionDraw(Graphics& graphics);
 
         std::vector<MRectangle> CheckTileCollisions(const MRectangle& other_rect);
+        std::vector<Slope> CheckSlopeCollisions(const MRectangle& other_rect);
 
         // Gets the spawn point of the player that is called out in the Map.tmx file. 
         const MVector2 GetPlayerSpawnPoint() const;
@@ -54,6 +57,7 @@ class Level {
         std::vector<Tile> tile_list_;
         std::vector<TileSet> tile_sets;
         std::vector<MRectangle> collision_rectangles_;
+        std::vector<Slope> slopes_;        
 
         // Loads a map.
         void LoadMap(std::string map_name, Graphics &graphics);

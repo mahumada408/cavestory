@@ -19,6 +19,9 @@ class Slope {
         // Check if the player collision rectangle collides with the slope. 
         const bool CollidesWidth(MRectangle& colliding_rectangle) const; 
 
+        const MVector2 GetP1() const { return this->point1_; }
+        const MVector2 GetP2() const { return this->point2_; }
+
     private:
         // point1 and 2 are the x and y coordinates of the points that make 
         // the line of the slope.

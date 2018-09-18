@@ -189,6 +189,31 @@ void Level::LoadMap(std::string map_name, Graphics &graphics)
                     }
                 }
             } 
+            // Get the slope elements for the level.
+            else if (ss.str() == "slopes") {
+                XMLElement* pObject = pObjectGroup->FirstChildElement("object");
+                if (pObject != nullptr) {
+                    while (pObject) {
+                        std::vector<MVector2> points;
+                        MVector2 point = MVector2(std::ceil(pObject->DoubleAttribute("x")), std::ceil(pObject->DoubleAttribute("y")));
+
+                        XMLElement* pPolyline = pObject->FirstChildElement("polyline");
+                        if (pPolyline != nullptr) {
+                            std::vector<std::string> pairs;
+                            const char* point_string = pPolyline->Attribute("points");
+
+                            std::stringstream ss;
+                            ss << point_string;
+                            Utils::Split(ss.str(), pairs, ' ');
+                            // Now we have each of the pairs of x,y coordinates. 
+                            // Now we loop through the list of pairs and split them into MVector2s and then store them in our points vector. 
+                            
+                        }
+                        pObject = pObject->NextSiblingElement("object");
+                    }
+                }
+            }
+
             // Get the spawn point for the level.
             else if (ss.str() == "spawn points") {
                 XMLElement* pObject = pObjectGroup->FirstChildElement("object");
